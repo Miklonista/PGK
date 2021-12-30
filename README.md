@@ -3,5 +3,5 @@
 
 Robimy platformówkę 3D
 
-
+cos
 ,,
