@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float groundedTimer;
     public float jumpVelocity = 2.0f;
     public float jumpHeight = 2.0f;
-    private float g = 4 * 9.81f;
+    private float g = 4 * 9.81f; // wieksza grawitacja powoduje lepsza dynamike ruchu - przyspiesza predkosc skoku 
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // poruszanie siê
+        // poruszanie siï¿½
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         bool groundedPlayer = controller.isGrounded;
         if (groundedPlayer)
         {
-            // cooldown interval to allow reliable jumping even whem coming down ramps
+            // czas odnowienia skoku - lepiej dziaÅ‚a 
             groundedTimer = 0.2f;
         }
         if (groundedTimer > 0)
@@ -64,19 +64,19 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            // must have been grounded recently to allow jump
+            // gracz musial spasc na jakas powierzchnie, zeby moc skoczyc znowu
             if (groundedTimer > 0)
             {
-                // no more until we recontact ground
+                // 0 dopoki znowu nie dotkniemy podloza
                 groundedTimer = 0;
 
-                // Physics dynamics formula for calculating jump up velocity based on height and gravity
+                // wzor na predkosc skoku w zaleznosci od wysokosci i grawitacji w naszej grze 
                 jumpVelocity += Mathf.Sqrt(jumpHeight * 2 * g);
             }
         }
 
         controller.Move(new Vector3(0f, jumpVelocity * Time.deltaTime, 0f));
-        Debug.Log(controller.isGrounded);
+        // Debug.Log(controller.isGrounded);
     }
 
 }
