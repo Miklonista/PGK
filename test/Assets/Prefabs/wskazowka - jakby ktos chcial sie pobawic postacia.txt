@@ -1,0 +1,2 @@
+Gdyby ktos chcial sprawdzic jak dziala postac, w grze do sceny dodac terrain, Player i Camera, ustawic CM Camera na Player (follow i lookAt), a w Player w PlayerController do cam dodac Main Camera i bedzie smigac
+A jak bedziecie w trakcie testowania, to zeby przywrocic kursor na ekran wystarczy ESC

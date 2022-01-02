@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float groundedTimer;
     public float jumpVelocity = 2.0f;
     public float jumpHeight = 2.0f;
-    private float g = 4 * 9.81f; // wieksza grawitacja powoduje lepsza dynamike ruchu - przyspiesza predkosc skoku 
+    public float g = 4 * 9.81f; // wieksza grawitacja powoduje lepsza dynamike ruchu - przyspiesza predkosc skoku 
 
     private void Start()
     {
