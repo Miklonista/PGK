@@ -5,19 +5,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //referencje
-    public CharacterController controller;
-    public Transform cam;
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private Transform cam;
 
     //ruch w plaszczyznie X Z
-    public float speed = 6f;
-    public float turnSmoothTime = 0.1f;
+    [SerializeField] private float speed = 6f;
+    private float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
     //skok
     private float groundedTimer;
-    public float jumpVelocity = 2.0f;
-    public float jumpHeight = 2.0f;
-    public float g = 4 * 9.81f; // wieksza grawitacja powoduje lepsza dynamike ruchu - przyspiesza predkosc skoku 
+    [SerializeField] private float jumpVelocity = 2.0f;
+    [SerializeField] private float jumpHeight = 2.0f;
+    [SerializeField] private float g = 4 * 9.81f; // wieksza grawitacja powoduje lepsza dynamike ruchu - przyspiesza predkosc skoku 
 
     private void Start()
     {
