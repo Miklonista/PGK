@@ -3,6 +3,11 @@
 
 Robimy platformówkę 3D
 
-https://youtu.be/NMRJu5bg5ZY
+<iframe width="560" height="315"
+        src="https://youtu.be/NMRJu5bg5ZY"
+        frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+        
+        
 
 
